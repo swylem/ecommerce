@@ -13,11 +13,13 @@
     <modules>
         <module>userservice</module>
         <module>productservice</module>
+        <module>discoveryservice</module>
     </modules>
 
     <properties>
         <java.version>24</java.version>
         <spring.boot.version>3.5.3</spring.boot.version>
+        <spring.cloud.version>2025.0.0</spring.cloud.version>
     </properties>
 
     <dependencyManagement>
@@ -34,6 +36,13 @@
                 <artifactId>lombok</artifactId>
                 <version>1.18.38</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
